@@ -11,26 +11,13 @@
     </div>
 
     <p class="description" use:reveal={{ variant: 'up', delay: 400 }}>
-      Although I'm not currently looking for any new opportunities, my inbox is always open. 
-      Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      Interested in collaborating or have a technically challenging project? 
+      My inbox is always open. Whether you have a question or just want to connect, 
+      I'll do my best to get back to you!
     </p>
     
-    <div class="contact-form-container" use:reveal={{ variant: 'up', delay: 600 }}>
-      <form class="contact-form" on:submit|preventDefault>
-        <div class="form-group">
-          <input type="text" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn big-btn">Send Message</button>
-      </form>
-      <div class="note">
-        *Currently this is a demo form. For real inquiries, please <a href="mailto:{profile.email}">email me directly</a>.
-      </div>
+    <div class="cta-container" use:reveal={{ variant: 'up', delay: 600 }}>
+      <a href="mailto:{profile.email}" class="btn big-btn">Say Hello</a>
     </div>
   </div>
 </section>
@@ -53,64 +40,23 @@
   }
 
   .big-btn {
-    padding: 1rem 3rem;
+    padding: 1.25rem 4rem;
     border: 1px solid var(--accent);
     color: var(--accent);
     border-radius: 4px;
-    font-size: 1rem;
-    transition: 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
     background: transparent;
     cursor: pointer;
     font-family: inherit;
     margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
   }
 
   .big-btn:hover {
     background: rgba(56, 189, 248, 0.1);
     transform: translateY(-3px);
-  }
-
-  .contact-form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-main);
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--accent);
-    outline: none;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-  }
-
-  .note {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-  }
-
-  .note a {
-    color: var(--accent);
-    text-decoration: underline;
+    box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.5);
   }
 </style>
