@@ -5,7 +5,8 @@ export default {
   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
   // for more information about preprocessors
   preprocess: vitePreprocess(),
-  server: {
-    host: true,
-  },
+  preprocess: vitePreprocess(),
+  compilerOptions: {
+    // Svelte 5 migration or compatibility options might go here
+  }
 }
